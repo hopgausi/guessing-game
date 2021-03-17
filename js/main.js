@@ -8,7 +8,7 @@ const comment = document.querySelector('.comment');
 
 submitBtn.addEventListener('click', result);
 let previousGuesses = [];
-let guessedNumber = Math.floor(Math.random() * 100);
+let guessedNumber = Math.floor(Math.random() * 100) + 1;
 
 function result() {
     let inputEl = document.querySelector('#number');
@@ -62,6 +62,6 @@ function play() {
     result_status.classList.remove('success');
     again.classList.add('again');
     comment.textContent = "";
-    guessedNumber = Math.floor(Math.random() * 100);
+    guessedNumber = Math.floor(Math.random() * 100) + 1;
     submitBtn.addEventListener('click', result);
 }
